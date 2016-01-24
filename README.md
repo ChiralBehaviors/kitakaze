@@ -51,7 +51,7 @@ Your Ultrastructure instance should now be up and available for your use.
 
 At the moment, there's not a lot of exciting things you can do with this at this point.  This is entirely due to my
 poor UI skills, however.  The GraphQL and JSON-LD APIs are fully functional, and using the tools available you can
-produce useable Ultrastructure applications.  But currently this is quite awkward and more work than is necessary - by far.
+produce useable Ultrastructure applications.  But currently this is quite awkward and more work than is necessary because there's only the API endpoint.
 
 The Customer/Order master detail view is avaiable at the URI: /northwind.html.  The GraphiQL IDE is available by default, and is 
 rooted to the base kernel workspace of the Ultrastructure instance.  To see the Northwind workspace, use the URI:
@@ -70,7 +70,7 @@ PostgreSQL instance is up n' running - whether this is remotely or locally emula
 ### Bootstrapping
   In you shell, do:
 
-    java -jar target/navi.jar bootstrap
+    ./navi bootstrap
     
 You will then see the boot sequence of the Ultrastructure instance into the PostgreSQL database for your Heroku application.  
 Note that this will take a lot of time if you're using the free version of Heroku.  The application keeps bumping up against memory limits and 
@@ -81,7 +81,7 @@ initialized Ultrastructure instance.
 
 To load the Northwind ontology, in the same bash process as above, do:
 
-    java -jar target/navi.jar load data/northwind.1.json
+    ./navi load data/northwind.1.json
     
 This loads the base ontology of the Northwind/Ultrastructure mashup.
 
@@ -89,10 +89,10 @@ This loads the base ontology of the Northwind/Ultrastructure mashup.
 
 You can load the demo scenario ontology in the same bash process as above by doing:
 
-    java -jar target/navi.jar load data/scenario.1.json
+    ./navi load data/scenario.1.json
     
 ### Loading Demo Scenario State
 
 Finally, you can load the snapshot state of the demo by:
 
-    java -jar target/navi.jar load-snap data/demo-data.json
+    ./navi load-snap data/demo-data.json
