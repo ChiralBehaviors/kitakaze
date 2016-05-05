@@ -3,7 +3,7 @@ auth: NULL
 logging:
   level: INFO
   loggers:
-    org.hibernate: INFO 
+    org.hibernate: INFO
     org.glassfish: WARN
     org.hibernate.c3p0: ERROR
     com.mchange: ERROR
