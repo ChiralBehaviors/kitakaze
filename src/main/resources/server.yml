@@ -8,24 +8,22 @@ logging:
     org.hibernate.c3p0: ERROR
     com.mchange: ERROR
     graphql: WARN
-        
-  appenders:
-    - type: console
+    org.jooq: WARN
       
 assetsConfiguration:
   overrides:
-    /: target/classes/assets
+    /northwind: target/classes/assets
         
 assets:
   - name: northwind
-    uri: /
+    uri: /northwind
     path: /assets
     index: index.html
-    
-server:
-  type: simple
-  adminContextPath: /admin
-  applicationContextPath: /
-  rootPath: /api/*  
-  connector:
-    type: http
+  - name: ide
+    uri: /api/ide
+    path: /workspace-explorer
+    index: index.html
+  - name: meta
+    uri: /api/meta/
+    path: /workspace-explorer/meta
+    index: index.html
